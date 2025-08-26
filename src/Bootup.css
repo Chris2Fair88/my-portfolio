@@ -1,0 +1,94 @@
+.bootup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  color: #00ff41;
+  font-family: 'Press Start 2P', 'VT323', monospace;
+  padding: 32px;
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bootup__text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.1s ease-in forwards;
+}
+
+.bootup__cursor {
+  display: inline-block;
+  background: #00ff41;
+  width: 8px;
+  height: 1em;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+.bootup__line {
+  margin-bottom: 8px;
+}
+
+.bootup__memory-bar {
+  display: inline-block;
+  width: 200px;
+  height: 2px;
+  background: #333;
+  margin-left: 16px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.bootup__memory-progress {
+  height: 100%;
+  background: #00ff41;
+  width: 0%;
+  animation: progressBar 2s ease-in-out forwards;
+}
+
+.bootup__loading-dots {
+  animation: loadingDots 1.5s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes progressBar {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes loadingDots {
+  0%, 20% { content: ''; }
+  25%, 45% { content: '.'; }
+  50%, 70% { content: '..'; }
+  75%, 100% { content: '...'; }
+}
+
+.bootup__skip-message {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 11px;
+  font-family: 'VT323', monospace;
+  color: #666;
+}
+
+.bootup__skip-message--active {
+  color: #00ff41;
+  animation: pulse 1s infinite;
+}
