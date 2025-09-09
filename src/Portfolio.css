@@ -135,91 +135,151 @@
 /* Mobile styles */
 @media (max-width: 480px) {
   .portfolio__terminal {
-    margin: 5px;
-    height: calc(100vh - 10px);
+    margin: 2px;
+    height: calc(100vh - 4px);
+    border: none; /* Remove border to save space */
   }
 
   .portfolio__header {
-    padding: 6px;
-    font-size: 12px;
+    padding: 4px;
+    font-size: 11px;
   }
 
   .portfolio__content {
-    padding: 10px;
+    padding: 6px;
   }
 
   .portfolio__section {
-    margin-bottom: 12px;
+    margin-bottom: 6px; /* Reduced from 12px */
   }
 
   .portfolio__section-title {
-    font-size: 12px;
-    margin-bottom: 6px;
-    word-break: break-word;
+    font-size: 11px;
+    margin-bottom: 3px; /* Reduced from 6px */
   }
 
   .portfolio__data {
-    font-size: 14px; /* Increased from 10px to keep links visible */
-    line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.2; /* Tighter line height */
     word-break: break-word;
   }
 
-  /* Make contact links more visible and touch-friendly */
+  /* Make contact links side by side with no borders */
   .portfolio__data a,
   .portfolio__email-button {
     display: inline-block;
-    margin: 4px 6px;
-    font-size: 14px; /* Explicit size for links */
-    min-height: 36px; /* Touch-friendly height */
-    line-height: 36px; /* Center text vertically */
-    padding: 0 8px;
+    margin: 0 2px;
+    font-size: 12px !important;
+    min-height: 28px; /* Reduced height */
+    line-height: 28px;
+    padding: 0 6px;
+    border: none; /* Remove borders completely */
+    background: transparent;
+    text-decoration: none;
+    color: #00ffff;
+    font-family: inherit;
   }
 
-  /* Stack contact links vertically for better touch targets */
-  .portfolio__section:last-child .portfolio__data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  /* Keep contact links side by side with minimal spacing */
+  .portfolio__section:nth-child(3) .portfolio__data,
+  .portfolio__section:last-of-type .portfolio__data {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important; /* Minimal gap */
+    margin-top: 2px;
   }
 
-  .portfolio__section:last-child .portfolio__data a,
-  .portfolio__section:last-child .portfolio__email-button {
-    display: block;
-    width: fit-content;
+  .portfolio__section:nth-child(3) .portfolio__data a,
+  .portfolio__section:nth-child(3) .portfolio__email-button,
+  .portfolio__section:last-of-type .portfolio__data a,
+  .portfolio__section:last-of-type .portfolio__email-button {
+    display: inline-block !important;
+    width: auto;
     text-align: center;
-    border: 1px solid #00ffff;
-    border-radius: 4px;
-    background: rgba(0, 255, 255, 0.1);
-    margin: 0;
+    margin: 0 !important;
+    font-weight: normal;
+    color: #00ffff !important;
+    background: transparent !important;
+    border: none !important;
   }
 }
 
 /* Very small screens */
 @media (max-width: 320px) {
   .portfolio__terminal {
-    margin: 2px;
+    margin: 1px;
+    border: none; /* Remove border completely */
   }
 
   .portfolio__content {
-    padding: 8px;
+    padding: 4px;
+  }
+
+  .portfolio__section {
+    margin-bottom: 4px; /* Minimal section spacing */
   }
 
   .portfolio__data {
-    font-size: 12px; /* Increased from 9px to keep readable */
+    font-size: 11px;
+    line-height: 1.1; /* Very tight line height */
   }
 
   .portfolio__section-title {
-    font-size: 10px;
+    font-size: 9px;
+    margin-bottom: 2px; /* Minimal title spacing */
   }
 
-  /* Ensure contact links remain visible and touchable */
+  /* Ultra-compact contact links */
   .portfolio__data a,
   .portfolio__email-button {
-    font-size: 12px !important;
-    min-height: 32px;
-    line-height: 32px;
-    padding: 0 6px;
+    font-size: 11px !important;
+    min-height: 24px !important;
+    line-height: 24px !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+  
+  .portfolio__section:nth-child(3) .portfolio__data,
+  .portfolio__section:last-of-type .portfolio__data {
+    gap: 2px !important;
+    margin-top: 1px !important;
+  }
+}
+
+/* iPhone 16 and similar devices (393px width) */
+@media (max-width: 400px) and (min-width: 350px) {
+  .portfolio__data a,
+  .portfolio__email-button {
+    font-size: 14px !important;
+    min-height: 36px !important;
+    line-height: 36px !important;
+    padding: 0 12px !important;
+    width: auto !important;
+    border: 1px solid #00ffff !important;
+    background: transparent !important;
+    font-weight: normal;
+    color: #00ffff !important;
+    margin: 0 !important;
+  }
+  
+  .portfolio__section:nth-child(3) .portfolio__data,
+  .portfolio__section:last-of-type .portfolio__data {
+    flex-direction: row !important;
+    gap: 10px !important;
+    margin-top: 6px !important;
+  }
+  
+  /* Ensure both buttons look identical and stay horizontal */
+  .portfolio__section:nth-child(3) .portfolio__data a,
+  .portfolio__section:nth-child(3) .portfolio__email-button,
+  .portfolio__section:last-of-type .portfolio__data a,
+  .portfolio__section:last-of-type .portfolio__email-button {
+    display: inline-block !important;
+    font-family: inherit !important;
+    text-decoration: none !important;
   }
 }
 
