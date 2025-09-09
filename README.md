@@ -1,5 +1,7 @@
 # Portfolio
 
+🚀 **[View Live Site](https://chris2fair88.github.io/my-portfolio/)**
+
 This is a React + Vite portfolio project styled with BEM methodology and animated with Framer Motion. It features a retro computer terminal aesthetic with a DOS bootup sequence, displaying projects in a sleek old-school computer monitor design.
 
 ## Features

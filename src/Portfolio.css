@@ -100,3 +100,114 @@
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .portfolio__terminal {
+    margin: 10px;
+    border-radius: 2px;
+  }
+
+  .portfolio__header {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .portfolio__content {
+    padding: 15px;
+  }
+
+  .portfolio__section {
+    margin-bottom: 15px;
+  }
+
+  .portfolio__section-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .portfolio__data {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .portfolio__terminal {
+    margin: 5px;
+    height: calc(100vh - 10px);
+  }
+
+  .portfolio__header {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .portfolio__content {
+    padding: 10px;
+  }
+
+  .portfolio__section {
+    margin-bottom: 12px;
+  }
+
+  .portfolio__section-title {
+    font-size: 12px;
+    margin-bottom: 6px;
+    word-break: break-word;
+  }
+
+  .portfolio__data {
+    font-size: 10px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  /* Stack contact links vertically on mobile */
+  .portfolio__data a,
+  .portfolio__email-button {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+  }
+
+  /* Make email button more touch-friendly */
+  .portfolio__email-button {
+    min-height: 32px;
+    padding: 4px 8px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .portfolio__terminal {
+    margin: 2px;
+  }
+
+  .portfolio__content {
+    padding: 8px;
+  }
+
+  .portfolio__data {
+    font-size: 9px;
+  }
+
+  .portfolio__section-title {
+    font-size: 10px;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .portfolio__terminal {
+    height: calc(100vh - 5px);
+  }
+
+  .portfolio__content {
+    padding: 8px;
+  }
+
+  .portfolio__section {
+    margin-bottom: 8px;
+  }
+}

@@ -16,9 +16,11 @@ body {
   font-family: 'Courier New', monospace;
   background-color: #000000;
   color: #00ff41;
+  font-size: clamp(12px, 2.5vw, 18px);
 }
 
 #root {
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
 }
